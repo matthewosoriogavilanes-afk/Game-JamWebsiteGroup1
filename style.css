@@ -1,0 +1,26 @@
+body {
+    /* A slightly deeper blue for better contrast */
+    background-color: #2c3e50; 
+    color: #ecf0f1; 
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    
+    /* line-height adds space between lines of text, making it feel less cramped */
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    /* Adding a little letter-spacing looks great with Condensed fonts */
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-weight: 300; /* Makes the subheader look a bit more elegant */
+    color: #bdc3c7;   /* A slightly softer grey to create hierarchy */
+}
