@@ -375,7 +375,7 @@ body {
     color: var(--text-main);
     letter-spacing: 0.08em;
 }
-.stat-value.accent { color: var(--orange); text-shadow: var(--glow-orange); }
+.stat-value.accent { color:var(--green); }
 
 /* ---- VIDEO ---- */
 .video-frame {
