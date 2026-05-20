@@ -9,8 +9,56 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="logo.svg">
+    <style>
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 32px;
+            background: rgba(8, 12, 16, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-logo {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: var(--cyan);
+            text-decoration: none;
+            text-shadow: var(--glow-cyan);
+        }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: var(--text-dim);
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--cyan); }
+        .hero { padding-top: 120px; }
+        @media (max-width: 540px) {
+            .nav { padding: 12px 16px; }
+            .nav-links { gap: 16px; }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">ROBOTING</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </nav>
 
     <!-- Animated background grid -->
     <div class="bg-grid"></div>
@@ -22,7 +70,7 @@
         <h1 class="hero-title">
             <span class="title-line">ROBOT</span><span class="title-accent">ING</span>
         </h1>
-        <p class="hero-tagline">ESCAPE THE FACTORY. SOLVE THE PUZZLES. SURVIVE TOGETHER.</p>
+        <p class="hero-tagline">ESCAPE THE FACTORY. SOLVE THE PUZZLES. WORK TOGETHER.</p>
         <div class="hero-divider">
             <span></span><span class="diamond">◆</span><span></span>
         </div>
@@ -39,7 +87,7 @@
 
     <!-- ABOUT SECTION -->
     <section id="about" class="section">
-        <div class="section-label">// MISSION BRIEF</div>
+        <div class="section-label">// MISSION </div>
         <h2 class="section-title">HOW TO PLAY</h2>
         <div class="cards">
             <div class="card">
@@ -57,13 +105,17 @@
                 <h3>SOLVE PUZZLES</h3>
                 <p>Coordinate with your partner to trigger switches, bypass hazards, and solve multi-stage factory puzzles.</p>
             </div>
+            <div class="card">
+            <h3>CONTROLS</h3>
+            <p>To control the robot, use W,A,S,D. Space bar to jump. Run over scraps to collect them.</p>
+        </div>
         </div>
     </section>
 
     <!-- ROBOT SHOWCASE -->
     <section class="section section-dark" id="robot">
-        <div class="section-label">// UNIT PROFILE</div>
-        <h2 class="section-title">MEET YOUR ROBOT</h2>
+        <div class="section-label">// PLAYER PROFILE</div>
+        <h2 class="section-title">MEET THE PLAYER</h2>
         <div class="robot-showcase">
             <div class="robot-frame">
                 <div class="frame-corner tl"></div>
@@ -72,7 +124,7 @@
                 <div class="frame-corner br"></div>
                 <img src="download.png" alt="Robot character" class="robot-img">
                 <div class="robot-hud">
-                    <span class="hud-tag">UNIT-01</span>
+                    <span class="hud-tag">ROBOT-01</span>
                     <span class="hud-status">OPERATIONAL</span>
                 </div>
             </div>
@@ -91,7 +143,7 @@
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">STATUS</span>
-                    <span class="stat-value accent">IN DEVELOPMENT</span>
+                    <span class="stat-value accent">COMPLETED</span>
                 </div>
             </div>
         </div>
@@ -117,9 +169,9 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-logo">ROBOTING</div>
-        <p class="footer-sub">Built with Unity &nbsp;·&nbsp; Academy Project &nbsp;·&nbsp; 2-Player Co-op</p>
+        <p class="footer-sub">Built with Unity &nbsp;·&nbsp; CS Academy Project &nbsp;·&nbsp; 2-Player Co-op</p>
         <div class="footer-line"></div>
-        <p class="footer-copy">© 2025 Roboting Team. All rights reserved.</p>
+        <p class="footer-copy">Made with ❤️ by the Roboting Team</p>
     </footer>
 
     <script>
